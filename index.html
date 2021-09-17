@@ -8,8 +8,8 @@
     <link rel="icon" href="">
 </head>
 <body>
-    <h1>Backtracking</h1>
-    <p>Copyright ©2002 by David Matuszek</p>
+    <p> <span><big><b>Backtracking</b></big></span> <br>Copyright ©2002 by David Matuszek</p>
+    
 
     <p>Backtracking is a form of recursion.</p>
     <p>The usual scenario is that you are faced with a number of options, and you must choose one of these. After you make your choice you will get a new set of options; just what set of options you get depends on what choice you made. This procedure is repeated over and over until you reach a final state. If you made a good sequence of choices, your final state is a <i>goal state</i>; if you didn't, it isn't.</p>
@@ -32,7 +32,7 @@
 
     </ol>
     <p>In this example we drew a picture of a tree. The tree is an abstract model of the possible sequences of choices we could make. There is also a data structure called a tree, but usually we don't have a data structure to tell us what choices we have. (If we do have an actual tree data structure, backtracking on it is called depth-first tree searching.)</p>
-    <h2>The backtracking algorithm.</h2>
+    <h3>The backtracking algorithm.</h3>
     <p>Here is the algorithm (in pseudocode) for doing backtracking from a given node n:
 
     </p>
@@ -849,15 +849,15 @@ You can probably find some way to order the children of a node. If the ordering 
         <span style="color: darkblue;">12.</span> <b> WHITE  BLACK  WHITE  _____  WHITE  BLACK  BLACK</b> <br>
         <span style="color: darkblue;">11.</span> <b> WHITE  BLACK  WHITE  BLACK  WHITE  _____  BLACK</b> <br>
         <span style="color: darkblue;">10.</span> <b> WHITE  BLACK  WHITE  BLACK  WHITE  BLACK  _____</b> <br>
-        <span style="color: darkblue;">&nbsp;9.</span> <b> WHITE  BLACK  WHITE  BLACK  _____  BLACK  WHITE</b> <br>
-        <span style="color: darkblue;">&nbsp;8.</span> <b> WHITE  BLACK  _____  BLACK  WHITE  BLACK  WHITE</b> <br>
-        <span style="color: darkblue;">&nbsp;7.</span> <b> _____  BLACK  WHITE  BLACK  WHITE  BLACK  WHITE</b> <br>
-        <span style="color: darkblue;">&nbsp;6.</span> <b> BLACK  _____  WHITE  BLACK  WHITE  BLACK  WHITE</b> <br>
-        <span style="color: darkblue;">&nbsp;5.</span> <b> BLACK  BLACK  WHITE  _____  WHITE  BLACK  WHITE</b> <br>
-        <span style="color: darkblue;">&nbsp;4.</span> <b> BLACK  BLACK  WHITE  BLACK  WHITE  _____  WHITE</b> <br>
-        <span style="color: darkblue;">&nbsp;3.</span> <b> BLACK  BLACK  WHITE  BLACK  _____  WHITE  WHITE</b> <br>
-        <span style="color: darkblue;">&nbsp;2.</span> <b> BLACK  BLACK  _____  BLACK  WHITE  WHITE  WHITE</b> <br>
-        <span style="color: darkblue;">&nbsp;1.</span> <b> BLACK  BLACK  BLACK  _____  WHITE  WHITE  WHITE</b> <br>
+        <span style="color: darkblue;">&nbsp;9.</span> <b>&nbsp; WHITE  BLACK  WHITE  BLACK  _____  BLACK  WHITE</b> <br>
+        <span style="color: darkblue;">&nbsp;8.</span> <b>&nbsp; WHITE  BLACK  _____  BLACK  WHITE  BLACK  WHITE</b> <br>
+        <span style="color: darkblue;">&nbsp;7.</span> <b>&nbsp; _____  BLACK  WHITE  BLACK  WHITE  BLACK  WHITE</b> <br>
+        <span style="color: darkblue;">&nbsp;6.</span> <b>&nbsp; BLACK  _____  WHITE  BLACK  WHITE  BLACK  WHITE</b> <br>
+        <span style="color: darkblue;">&nbsp;5.</span> <b>&nbsp; BLACK  BLACK  WHITE  _____  WHITE  BLACK  WHITE</b> <br>
+        <span style="color: darkblue;">&nbsp;4.</span> <b>&nbsp; BLACK  BLACK  WHITE  BLACK  WHITE  _____  WHITE</b> <br>
+        <span style="color: darkblue;">&nbsp;3.</span> <b>&nbsp; BLACK  BLACK  WHITE  BLACK  _____  WHITE  WHITE</b> <br>
+        <span style="color: darkblue;">&nbsp;2.</span> <b>&nbsp; BLACK  BLACK  _____  BLACK  WHITE  WHITE  WHITE</b> <br>
+        <span style="color: darkblue;">&nbsp;1.</span> <b>&nbsp; BLACK  BLACK  BLACK  _____  WHITE  WHITE  WHITE</b> <br>
         </p>
         <p>
             Notice that the solution is given in reverse order: <big>BLACK</big> starts out on the left and <big>WHITE</big> on the right, as in the last line. I've added line numbers to the actual output in order to emphasize this point. Backtracking always produces its results (sequence of choices) in reverse order; it is up to you, the programmer, to reverse the results again to get them in the correct order.
